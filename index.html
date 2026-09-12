@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的主页</title>
+  <style>
+    /* 重置默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 页面主体：铺满整屏，并设置背景图 */
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+      /* 背景图设置 */
+      background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80");
+      background-size: cover;        /* 图片铺满整个屏幕 */
+      background-position: center;   /* 图片居中显示 */
+      background-repeat: no-repeat;
+      background-attachment: fixed;  /* 滚动时背景固定 */
+    }
+
+    /* 内容容器：半透明卡片，让文字更清晰 */
+    .container {
+      max-width: 700px;
+      padding: 50px 40px;
+      background-color: rgba(0, 0, 0, 0.55); /* 半透明黑色遮罩 */
+      border-radius: 16px;
+      color: #ffffff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px); /* 背景模糊效果 */
+    }
+
+    /* 标题样式 */
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* 段落样式 */
+    p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* 小屏幕适配 */
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .container { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>欢迎来到我的主页</h1>
+    <p>
+      这里是我的个人主页示例。我使用 HTML 和 CSS 构建了这个简单的页面，
+      通过 background-image 属性为页面添加了一张全屏背景图，
+      并用半透明卡片让文字在图片上依然清晰可读。
+    </p>
+  </div>
+</body>
+</html>
